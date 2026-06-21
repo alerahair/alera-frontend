@@ -1,0 +1,39 @@
+.rating-bar {
+  background: var(--red);
+  padding: 2rem 0;
+}
+
+.rating-bar__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.rating-bar__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rating-bar__value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1;
+}
+
+.rating-bar__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 600px) {
+  .rating-bar__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,139 @@
+.branches {
+  padding: var(--section-padding);
+  background: var(--white);
+}
+
+.branches__header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.branches__intro {
+  color: var(--gray-600);
+}
+
+.branches__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.branches__filter {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--gray-200);
+  border-radius: 100px;
+  color: var(--gray-600);
+  background: var(--white);
+  transition: all 0.2s;
+}
+
+.branches__filter:hover,
+.branches__filter--active {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+
+.branches__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.branch-card {
+  padding: 1.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: box-shadow 0.25s;
+}
+
+.branch-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.branch-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.branch-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.branch-card__province {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--off-white);
+  padding: 0.25rem 0.6rem;
+  border-radius: 100px;
+  color: var(--gray-600);
+}
+
+.branch-card__city {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: 1.25rem;
+}
+
+.branch-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.branch-card__row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.branch-card__row a {
+  color: var(--gray-600);
+  transition: color 0.2s;
+}
+
+.branch-card__row a:hover {
+  color: var(--red);
+}
+
+.branch-card__icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.branch-card__btn {
+  align-self: stretch;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  padding: 0.65rem 1rem;
+}
+
+@media (max-width: 900px) {
+  .branches__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .branches__grid {
+    grid-template-columns: 1fr;
+  }
+}
