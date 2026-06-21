@@ -26,17 +26,16 @@
   border-radius: 2px;
   display: flex;
   flex-direction: column;
-  gap: 0;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .services__card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
   transform: translateY(-2px);
 }
 
 .services__card-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--red);
   margin-bottom: 1rem;
 }
@@ -56,12 +55,23 @@
 
 .services__list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--gray-600);
-  padding: 0.5rem 0;
+  padding: 0.55rem 0;
   border-bottom: 1px solid var(--gray-100);
+  line-height: 1.5;
+}
+
+.services__list-item strong {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.services__item-desc {
+  color: var(--gray-400);
+  font-size: 0.8rem;
 }
 
 .services__dot {
@@ -71,6 +81,7 @@
   border-radius: 50%;
   background: var(--red);
   flex-shrink: 0;
+  margin-top: 0.45rem;
 }
 
 .services__card-btn {
