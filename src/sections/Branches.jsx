@@ -47,30 +47,18 @@ export default function Branches() {
         <div className="branches__grid">
           {filtered.map(branch => (
             <div key={branch.id ?? branch.name} className="branch-card">
-              <div className="branch-card__top">
-                <h3 className="branch-card__name">{branch.name}</h3>
-                <span className="branch-card__province">{branch.province}</span>
-              </div>
+              <h3 className="branch-card__name">{branch.name}</h3>
               {branch.city && <p className="branch-card__city">{branch.city}</p>}
+              <span className="branch-card__province">{branch.province}</span>
               <div className="branch-card__details">
-                {branch.phone && (
-                  <div className="branch-card__row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-                    <a href={`tel:${branch.phone.replace(/\s/g, '')}`}>{branch.phone}</a>
-                  </div>
-                )}
-                {branch.hours && (
-                  <div className="branch-card__row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span>{branch.hours}</span>
-                  </div>
-                )}
-                {branch.address && (
-                  <div className="branch-card__row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>{branch.address}</span>
-                  </div>
-                )}
+                <div className="branch-card__row">
+                  <span className="branch-card__label">Contact:</span>
+                  <span>{branch.phone || ''}</span>
+                </div>
+                <div className="branch-card__row">
+                  <span className="branch-card__label">Email:</span>
+                  <span>{branch.email || ''}</span>
+                </div>
               </div>
             </div>
           ))}

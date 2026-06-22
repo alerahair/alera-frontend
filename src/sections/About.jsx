@@ -6,7 +6,11 @@ export default function About() {
       <div className="container about__grid">
         <div className="about__media">
           <div className="about__img-placeholder" aria-hidden="true">
-            <span>A</span>
+            <img
+              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80"
+              alt="Nail art service at Alera Hair & Nail Studio"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </div>
           <div className="about__accent" aria-hidden="true" />
         </div>

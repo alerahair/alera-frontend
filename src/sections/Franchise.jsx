@@ -16,7 +16,7 @@ export default function Franchise() {
         <div className="container franchise__grid">
           <div className="franchise__copy">
             <p className="section-label">Join Our Family</p>
-            <h2 className="section-title">Own an<br /><em>Alera Studio</em></h2>
+            <h2 className="section-title">Own an<br /><em>Alera Franchise</em></h2>
             <p className="franchise__body">
               Become part of South Africa's fastest-growing hair and nail studio network.
               Our franchise model is designed to set you up for success — from your first
