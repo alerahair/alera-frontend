@@ -72,6 +72,12 @@
   line-height: 1.2;
 }
 
+.branch-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .branch-card__province {
   display: inline-block;
   font-size: 0.65rem;
@@ -82,12 +88,12 @@
   border-radius: 100px;
   color: var(--gray-600);
   white-space: nowrap;
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  margin-top: 2px;
 }
 
 .branch-card__bottom {
-  border-top: 1px solid var(--gray-100);
-  padding-top: 6px;
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
   gap: 2px;
