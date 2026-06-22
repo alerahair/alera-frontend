@@ -43,16 +43,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  align-items: start;
 }
 
 .branch-card {
-  padding: 16px;
+  padding: 14px 16px;
   border: 1px solid var(--gray-200);
   border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
   transition: box-shadow 0.25s;
 }
 
@@ -60,69 +56,56 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
-.branch-card__top {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
 .branch-card__name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
-}
-
-.branch-card__province {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--off-white);
-  padding: 0.25rem 0.6rem;
-  border-radius: 100px;
-  color: var(--gray-600);
-  white-space: nowrap;
-  align-self: flex-start;
-  margin-bottom: 0;
+  margin: 0 0 2px;
+  line-height: 1.2;
 }
 
 .branch-card__city {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: var(--gray-400);
+  margin: 0 0 6px;
+  min-height: 1.1em;
+  line-height: 1.2;
+}
+
+.branch-card__province {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--off-white);
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  color: var(--gray-600);
+  white-space: nowrap;
+  margin-bottom: 8px;
 }
 
 .branch-card__bottom {
-  margin-top: 4px;
+  border-top: 1px solid var(--gray-100);
+  padding-top: 6px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
+}
+
+.branch-card__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  line-height: 1.4;
 }
 
 .branch-card__label {
   font-weight: 500;
   color: var(--black);
-  font-size: 0.85rem;
-  min-width: 4.5rem;
-}
-
-.branch-card__details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.branch-card__row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--gray-600);
-  margin: 0;
-  padding: 0;
-}
-
-.branch-card__row svg {
   flex-shrink: 0;
-  color: var(--gray-400);
 }
 
 .branch-card__row a {
