@@ -1,11 +1,13 @@
 import './Franchise.css'
 
 const PERKS = [
-  { title: 'Proven Brand', desc: 'Leverage 8+ years of trust and reputation across South Africa.' },
+  { title: 'Proven Brand', desc: 'Leverage 18+ years of trust and reputation across South Africa.' },
   { title: 'Full Training', desc: 'Comprehensive training for you and your team before opening day.' },
   { title: 'Marketing Support', desc: 'National campaigns and local marketing materials provided.' },
   { title: 'Ongoing Support', desc: 'Dedicated franchise manager and regular check-ins.' },
 ]
+
+const BRANDS = ['Alera Hair', 'Alera Nail Bar', 'Alera Barbers']
 
 export default function Franchise() {
   return (
@@ -20,6 +22,11 @@ export default function Franchise() {
               Our franchise model is designed to set you up for success — from your first
               consultation to your grand opening and beyond.
             </p>
+            <div className="franchise__brands">
+              {BRANDS.map(brand => (
+                <span key={brand} className="franchise__brand-tag">{brand}</span>
+              ))}
+            </div>
             <a href="#contact" className="btn btn-primary">Enquire About Franchising</a>
           </div>
           <div className="franchise__perks">

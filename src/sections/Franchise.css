@@ -42,6 +42,24 @@
   align-items: flex-start;
 }
 
+.franchise__brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.franchise__brand-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
 .franchise__perk-dot {
   width: 8px;
   height: 8px;
