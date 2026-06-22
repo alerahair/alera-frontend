@@ -43,7 +43,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .branch-card {
@@ -52,7 +52,6 @@
   border-radius: 2px;
   display: flex;
   flex-direction: column;
-  height: 100%;
   box-sizing: border-box;
   transition: box-shadow 0.25s;
 }
