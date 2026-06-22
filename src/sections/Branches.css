@@ -18,7 +18,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .branches__filter {
@@ -42,7 +42,7 @@
 .branches__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 8px;
   align-items: start;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .branch-card__bottom {
-  margin-top: 8px;
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
   gap: 4px;
