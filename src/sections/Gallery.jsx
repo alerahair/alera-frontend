@@ -18,7 +18,7 @@ export default function Gallery() {
   const [active, setActive] = useState('All')
   const { data } = useFetch('/api/gallery')
 
-  const items = data || FALLBACK
+  const items = (Array.isArray(data) && data.length > 0) ? data : FALLBACK
   const categories = ['All', ...new Set(items.map(i => i.category).filter(Boolean))]
   const filtered = active === 'All' ? items : items.filter(i => i.category === active)
 

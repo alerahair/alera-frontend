@@ -23,7 +23,7 @@ function Stars({ count = 5 }) {
 
 export default function Testimonials() {
   const { data, loading, error } = useFetch('/api/testimonials')
-  const reviews = data || FALLBACK
+  const reviews = (Array.isArray(data) && data.length > 0) ? data : FALLBACK
 
   return (
     <section className="testimonials" id="testimonials">

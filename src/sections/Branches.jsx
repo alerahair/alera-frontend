@@ -20,7 +20,7 @@ export default function Branches() {
   const [activeProvince, setActiveProvince] = useState('All')
   const { data } = useFetch('/api/branches')
 
-  const branches = data || FALLBACK
+  const branches = (Array.isArray(data) && data.length > 0) ? data : FALLBACK
   const provinces = ['All', ...new Set(branches.map(b => b.province).filter(Boolean))]
   const filtered = activeProvince === 'All' ? branches : branches.filter(b => b.province === activeProvince)
 

@@ -61,7 +61,7 @@ const ICON = { Hair: '✂', Nail: '◈', Beauty: '◇' }
 
 export default function Services() {
   const { data } = useFetch('/api/services')
-  const services = data || FALLBACK
+  const services = (Array.isArray(data) && data.length > 0) ? data : FALLBACK
   const grouped = groupByCategory(services)
 
   return (
