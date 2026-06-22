@@ -47,10 +47,12 @@ export default function Branches() {
         <div className="branches__grid">
           {filtered.map(branch => (
             <div key={branch.id ?? branch.name} className="branch-card">
-              <h3 className="branch-card__name">{branch.name}</h3>
-              {branch.city && <p className="branch-card__city">{branch.city}</p>}
-              <span className="branch-card__province">{branch.province}</span>
-              <div className="branch-card__details">
+              <div className="branch-card__top">
+                <h3 className="branch-card__name">{branch.name}</h3>
+                {branch.city && <p className="branch-card__city">{branch.city}</p>}
+                <span className="branch-card__province">{branch.province}</span>
+              </div>
+              <div className="branch-card__bottom">
                 <div className="branch-card__row">
                   <span className="branch-card__label">Contact:</span>
                   <span>{branch.phone || ''}</span>
