@@ -10,10 +10,16 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 15% 55%, rgba(204, 31, 31, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, rgba(204, 31, 31, 0.08) 0%, transparent 50%),
-    linear-gradient(160deg, #140505 0%, #0a0a0a 60%, #0f0505 100%);
+  background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1920&q=80');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero__content {
@@ -48,7 +54,7 @@
 
 .hero__subtitle {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 2.75rem;
   line-height: 1.75;
   max-width: 440px;
