@@ -1,9 +1,14 @@
 import './Hero.css'
+import heroBg from '../assets/pexels-afro hair.jpg'
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero__bg" aria-hidden="true">
+      <div
+        className="hero__bg"
+        style={{ backgroundImage: `url(${heroBg})` }}
+        aria-hidden="true"
+      >
         <div className="hero__overlay" />
       </div>
       <div className="hero__content container">
