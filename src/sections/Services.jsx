@@ -1,5 +1,4 @@
 import { useFetch } from '../api'
-import { LoadingSpinner, ErrorMessage } from '../components/ApiState'
 import './Services.css'
 
 const FALLBACK = [
@@ -26,7 +25,7 @@ function groupByCategory(services) {
 const ICON = { Hair: '✂', Nails: '◈', Treatments: '◇' }
 
 export default function Services() {
-  const { data, loading, error } = useFetch('/api/services')
+  const { data } = useFetch('/api/services')
   const services = data || FALLBACK
   const grouped = groupByCategory(services)
 
@@ -42,33 +41,27 @@ export default function Services() {
           </p>
         </div>
 
-        {loading && <LoadingSpinner />}
-        {error && !data && <ErrorMessage message={error} />}
-
-        {!loading && (
-          <div className="services__grid">
-            {Object.entries(grouped).map(([category, items]) => (
-              <div key={category} className="services__card">
-                <div className="services__card-icon">{ICON[category] || '◆'}</div>
-                <h3 className="services__card-title">{category}</h3>
-                <ul className="services__list">
-                  {items.map(svc => (
-                    <li key={svc.id ?? svc.name} className="services__list-item">
-                      <span className="services__dot" />
-                      <span>
-                        <strong>{svc.name}</strong>
-                        {svc.description && (
-                          <span className="services__item-desc"> — {svc.description}</span>
-                        )}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <a href="#contact" className="btn btn-outline services__card-btn">Book Now</a>
-              </div>
-            ))}
-          </div>
-        )}
+        <div className="services__grid">
+          {Object.entries(grouped).map(([category, items]) => (
+            <div key={category} className="services__card">
+              <div className="services__card-icon">{ICON[category] || '◆'}</div>
+              <h3 className="services__card-title">{category}</h3>
+              <ul className="services__list">
+                {items.map(svc => (
+                  <li key={svc.id ?? svc.name} className="services__list-item">
+                    <span className="services__dot" />
+                    <span>
+                      <strong>{svc.name}</strong>
+                      {svc.description && (
+                        <span className="services__item-desc"> — {svc.description}</span>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -120,13 +120,6 @@
   color: var(--red);
 }
 
-.branch-card__btn {
-  align-self: stretch;
-  text-align: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  padding: 0.65rem 1rem;
-}
 
 @media (max-width: 900px) {
   .branches__grid {

@@ -3,15 +3,16 @@ import { postJSON, useFetch } from '../api'
 import './Contact.css'
 
 const FALLBACK_BRANCHES = [
-  'Menlyn Park', 'Eastgate', 'Sandton City', 'Canal Walk', 'Somerset Mall',
-  'Gateway', 'La Lucia Mall', 'Baywest Mall', 'Mimosa Mall', 'Crossing Mall', 'Boardwalk',
+  'Twin City Mall', 'Sam Ntuli Mall', 'Tshilamba Mall', 'Groblersdal',
+  'Rustenburg Mall', 'Bethal Mall', 'Matsamo Mall', 'Hebron Mall',
+  'Maluti Crescent Mall', 'Tshepo Shopping Center', 'Mamaila Mall',
 ]
 
-const EMPTY_FORM = { name: '', email: '', phone: '', branch: '', service: '', message: '' }
+const EMPTY_FORM = { name: '', email: '', phone: '', branch: '', message: '' }
 
 export default function Contact() {
   const [form, setForm] = useState(EMPTY_FORM)
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [status, setStatus] = useState('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
   const { data: branchData } = useFetch('/api/branches')
@@ -38,15 +39,14 @@ export default function Contact() {
       <div className="container contact__grid">
         <div className="contact__info">
           <p className="section-label">Get in Touch</p>
-          <h2 className="section-title">Book Your<br /><em>Appointment</em></h2>
+          <h2 className="section-title">Contact Us</h2>
           <p className="contact__body">
-            Ready for a new look? Fill in the form and we'll confirm your appointment
-            at your nearest Alera studio within 24 hours.
+            Get in touch with us.
           </p>
           <div className="contact__details">
             <div className="contact__detail-row">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:hello@alerahair.co.za">hello@alerahair.co.za</a>
+              <a href="mailto:alerahair@gmail.com">alerahair@gmail.com</a>
             </div>
             <div className="contact__detail-row">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
@@ -60,9 +60,9 @@ export default function Contact() {
             <div className="contact__success">
               <div className="contact__success-icon">✓</div>
               <h3>Thank You!</h3>
-              <p>We've received your booking request and will be in touch shortly.</p>
+              <p>We've received your message and will be in touch shortly.</p>
               <button className="btn btn-outline contact__reset" onClick={() => setStatus('idle')}>
-                Send Another Request
+                Send Another Message
               </button>
             </div>
           ) : (
@@ -99,9 +99,9 @@ export default function Contact() {
                   />
                 </div>
                 <div className="contact__field">
-                  <label htmlFor="branch">Preferred Branch *</label>
+                  <label htmlFor="branch">Preferred Branch</label>
                   <select
-                    id="branch" name="branch" required
+                    id="branch" name="branch"
                     value={form.branch} onChange={handleChange}
                     disabled={status === 'loading'}
                   >
@@ -109,21 +109,6 @@ export default function Contact() {
                     {branchNames.map(b => <option key={b} value={b}>{b}</option>)}
                   </select>
                 </div>
-              </div>
-
-              <div className="contact__field">
-                <label htmlFor="service">Service</label>
-                <select
-                  id="service" name="service"
-                  value={form.service} onChange={handleChange}
-                  disabled={status === 'loading'}
-                >
-                  <option value="">Select a service</option>
-                  <option value="hair">Hair Services</option>
-                  <option value="nails">Nail Services</option>
-                  <option value="treatment">Treatments</option>
-                  <option value="franchise">Franchise Enquiry</option>
-                </select>
               </div>
 
               <div className="contact__field">
@@ -145,7 +130,7 @@ export default function Contact() {
                 className="btn btn-primary contact__submit"
                 disabled={status === 'loading'}
               >
-                {status === 'loading' ? 'Sending…' : 'Send Booking Request'}
+                {status === 'loading' ? 'Sending…' : 'Send Message'}
               </button>
             </form>
           )}
