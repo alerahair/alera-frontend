@@ -54,7 +54,7 @@
   gap: 2px;
 }
 .branch-card__bottom {
-  margin-top: 4px;
+  margin-top: 6px;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -69,18 +69,6 @@
   font-size: 0.8rem;
   color: var(--gray-400);
   margin: 0 0 4px 0;
-}
-.branch-card__province {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--off-white);
-  padding: 0.2rem 0.5rem;
-  border-radius: 100px;
-  color: var(--gray-600);
-  white-space: nowrap;
-  align-self: flex-start;
-  margin: 0 0 6px 0;
 }
 .branch-card__label {
   font-weight: 500;
