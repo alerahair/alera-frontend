@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
@@ -12,7 +12,7 @@
   background: rgba(10, 10, 10, 0.96);
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 0 rgba(255,255,255,0.06);
-  padding: 1rem 0;
+  padding: 0.65rem 0;
 }
 
 .navbar__inner {
@@ -21,28 +21,32 @@
   justify-content: space-between;
 }
 
+/* ── Logo image ── */
 .navbar__logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.navbar__logo-alera {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: 0.1em;
+.navbar__logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+  /* The logo is red/black on white — invert to white on transparent for dark navbar */
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease, opacity 0.2s ease;
 }
 
-.navbar__logo-sub {
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--red);
-  font-weight: 500;
+/* Once scrolled (dark bg), keep the full-colour logo readable */
+.navbar--scrolled .navbar__logo-img {
+  filter: brightness(0) invert(1);
 }
 
+.navbar__logo:hover .navbar__logo-img {
+  opacity: 0.85;
+}
+
+/* ── Nav links ── */
 .navbar__links {
   display: flex;
   align-items: center;
@@ -66,6 +70,7 @@
   font-size: 0.8rem;
 }
 
+/* ── Burger ── */
 .navbar__burger {
   display: none;
   flex-direction: column;
@@ -94,7 +99,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
-    font-size: 1.2rem;
   }
 
   .navbar__links--open {
@@ -103,5 +107,9 @@
 
   .navbar__link {
     font-size: 1.1rem;
+  }
+
+  .navbar__logo-img {
+    height: 50px;
   }
 }

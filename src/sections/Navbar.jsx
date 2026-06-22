@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logo from '../assets/alera-logo.svg'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -23,9 +24,8 @@ export default function Navbar() {
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
-        <a href="#" className="navbar__logo">
-          <span className="navbar__logo-alera">ALERA</span>
-          <span className="navbar__logo-sub">Hair & Nail Studio</span>
+        <a href="#" className="navbar__logo" aria-label="Alera Hair Nail Studio – Home">
+          <img src={logo} alt="Alera Hair Nail Studio" className="navbar__logo-img" />
         </a>
 
         <nav className={`navbar__links${menuOpen ? ' navbar__links--open' : ''}`}>
