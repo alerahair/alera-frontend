@@ -79,3 +79,19 @@
     margin: 0 auto;
   }
 }
+
+.about__vision-mission {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__vm-heading {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}

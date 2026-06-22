@@ -1,5 +1,6 @@
 import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
+import About from './sections/About'
 import Services from './sections/Services'
 import Gallery from './sections/Gallery'
 import Branches from './sections/Branches'
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <Services />
         <Gallery />
         <Branches />

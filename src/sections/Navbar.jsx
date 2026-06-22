@@ -3,6 +3,7 @@ import logo from '../assets/alera-logo.png'
 import './Navbar.css'
 
 const NAV_LINKS = [
+  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Branches', href: '#branches' },

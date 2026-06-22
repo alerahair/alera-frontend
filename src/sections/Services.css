@@ -96,3 +96,11 @@
     margin: 0 auto;
   }
 }
+
+.services__closing {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  font-style: italic;
+}
