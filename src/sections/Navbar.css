@@ -32,14 +32,7 @@
   height: 60px;
   width: auto;
   display: block;
-  /* The logo is red/black on white — invert to white on transparent for dark navbar */
-  filter: brightness(0) invert(1);
-  transition: filter 0.3s ease, opacity 0.2s ease;
-}
-
-/* Once scrolled (dark bg), keep the full-colour logo readable */
-.navbar--scrolled .navbar__logo-img {
-  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
 }
 
 .navbar__logo:hover .navbar__logo-img {

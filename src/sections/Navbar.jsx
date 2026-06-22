@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../assets/alera-logo.svg'
+import logo from '../assets/alera-logo.jpeg'
 import './Navbar.css'
 
 const NAV_LINKS = [
