@@ -12,10 +12,8 @@ export default function Hero() {
         <div className="hero__overlay" />
       </div>
       <div className="hero__content container">
-        <p className="hero__eyebrow">Alera Hair &amp; Nail Studio</p>
-        <h1 className="hero__title">
-          Freedom To<br /><em>Natural Beauty</em>
-        </h1>
+        <h1 className="hero__title">Alera Hair &amp; Nail Studio</h1>
+        <p className="hero__slogan"><em>Freedom To Natural Beauty</em></p>
         <p className="hero__subtitle">
           Professional hair and nail services crafted with care.
         </p>
