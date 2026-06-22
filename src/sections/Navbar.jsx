@@ -39,9 +39,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="btn btn-primary navbar__cta" onClick={() => setMenuOpen(false)}>
-            Book Now
-          </a>
         </nav>
 
         <button

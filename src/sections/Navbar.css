@@ -58,11 +58,6 @@
   color: var(--white);
 }
 
-.navbar__cta {
-  padding: 0.6rem 1.4rem;
-  font-size: 0.8rem;
-}
-
 /* ── Burger ── */
 .navbar__burger {
   display: none;
