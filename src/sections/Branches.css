@@ -48,6 +48,17 @@
 .branch-card:hover {
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
+.branch-card__top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.branch-card__bottom {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 .branch-card__name {
   font-family: var(--font-heading);
   font-size: 1.1rem;
